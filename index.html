@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Choose the ethical review form for your thesis data." />
+    <title>Ethical review form | SW thesis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div class="mark" aria-hidden="true">SW</div>
+        <div>
+          <p class="eyebrow">Social sciences · thesis workflow</p>
+          <p class="institution">Ethical review form retrieval</p>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="section-kicker">01 / Choose your route</p>
+        <h1 id="page-title">Start with the data you will use.</h1>
+        <p class="intro">
+          Use this short check to retrieve the ethical review form that matches your thesis.
+          The distinction is about where the data comes from, not how much data you collect.
+        </p>
+      </section>
+
+      <section class="guidance" aria-label="Data type definitions">
+        <article class="definition primary-definition">
+          <span class="definition-number">A</span>
+          <div>
+            <h2>Primary data</h2>
+            <p>
+              Data you collect or produce yourself for this thesis. This includes interviews,
+              surveys, observations, experiments, usability tests, or any other direct contact
+              with participants. Answer <strong>yes</strong> even if you also do desk research,
+              collect only one interview, or use a small sample.
+            </p>
+          </div>
+        </article>
+        <article class="definition secondary-definition">
+          <span class="definition-number">B</span>
+          <div>
+            <h2>Secondary data</h2>
+            <p>
+              Material that was already collected or created by someone else and that you reuse
+              for your thesis, such as public datasets, archives, policy documents, media
+              coverage, or published research. Choose this route only when you will not collect
+              any new data yourself.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="decision" aria-labelledby="decision-title">
+        <div class="decision-heading">
+          <p class="section-kicker">02 / One question</p>
+          <h2 id="decision-title">Will you collect any new data yourself?</h2>
+          <p class="helper">
+            Think about the complete thesis project, including a single interview or a small
+            pilot. Existing sources can still be part of a primary-data thesis.
+          </p>
+        </div>
+        <div class="choice-grid" role="group" aria-label="Choose your data type">
+          <button class="choice" type="button" data-answer="primary" aria-pressed="false">
+            <span class="choice-label">Yes, I will collect new data</span>
+            <span class="choice-detail">Retrieve the primary-data form <span aria-hidden="true">↗</span></span>
+          </button>
+          <button class="choice" type="button" data-answer="secondary" aria-pressed="false">
+            <span class="choice-label">No, I will only use existing material</span>
+            <span class="choice-detail">Retrieve the secondary-data form <span aria-hidden="true">↗</span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="result" id="result" aria-live="polite" hidden>
+        <div class="result-topline">
+          <p class="section-kicker">03 / Your form</p>
+          <span class="status"><span class="status-dot"></span>Ready to download</span>
+        </div>
+        <div class="result-content">
+          <div>
+            <p class="result-type" id="result-type"></p>
+            <h2 id="result-title"></h2>
+            <p id="result-description"></p>
+          </div>
+          <div class="result-actions">
+            <button class="download" id="download" type="button">
+              <span aria-hidden="true">↓</span> Download form
+            </button>
+            <button class="reset" id="reset" type="button">Start over</button>
+          </div>
+        </div>
+        <p class="next-step">
+          After downloading, complete every section carefully, discuss your approach with your
+          supervisor, and submit the completed form through the designated Canvas assignment.
+        </p>
+      </section>
+
+      <footer>
+        <span>SW thesis ethics</span>
+        <span>Questions? Contact your thesis supervisor.</span>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
