@@ -49,6 +49,8 @@ body::before {
 h1, h2, p { margin-top: 0; }
 h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(42px, 6vw, 72px); line-height: 1.02; letter-spacing: -.06em; font-weight: 800; }
 .intro { max-width: 650px; margin: 0; color: var(--uva-muted); font-size: 17px; line-height: 1.7; }
+.submission-rule { display: grid; gap: 6px; max-width: 760px; margin-top: 24px; padding: 16px 18px; border-left: 5px solid var(--uva-red); background: #fff5f7; color: var(--uva-ink); font-size: 14px; line-height: 1.55; }
+.submission-rule strong { color: var(--uva-red-dark); font-family: 'DM Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
 .guidance { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 72px; }
 .definition { display: grid; grid-template-columns: 36px 1fr; gap: 18px; padding: 27px 28px 30px; border-top: 3px solid var(--uva-ink); }
 .primary-definition { background: var(--uva-gray-soft); }

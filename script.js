@@ -9,6 +9,28 @@ const translations = {
 
 translations.en.nextStep = 'After downloading, complete every section carefully and submit the completed form through the designated Canvas assignment.';
 translations.nl.nextStep = 'Vul na het downloaden elke sectie zorgvuldig in en dien het ingevulde formulier in via de aangewezen Canvas-opdracht.';
+translations.en.submissionRuleLabel = 'Submission rule';
+translations.en.submissionRule = 'Download Form A or Form B. Submit the form you downloaded to the Canvas assignment with the same letter. Form A goes to the primary-data assignment. Form B goes to the secondary-data assignment.';
+translations.en.primaryChoice = 'I need FORM A - primary data';
+translations.en.primaryChoiceDetail = 'DOWNLOAD FORM A -> SUBMIT TO THE FORM A CANVAS ASSIGNMENT';
+translations.en.secondaryChoice = 'I need FORM B - secondary data';
+translations.en.secondaryChoiceDetail = 'DOWNLOAD FORM B -> SUBMIT TO THE FORM B CANVAS ASSIGNMENT';
+translations.en.submissionLabel = 'Do this exactly:';
+translations.en.forms = {
+  primary: 'FORM A SELECTED -> DOWNLOAD FORM A -> SUBMIT FORM A TO THE FORM A CANVAS ASSIGNMENT. Do not submit it to Form B.',
+  secondary: 'FORM B SELECTED -> DOWNLOAD FORM B -> SUBMIT FORM B TO THE FORM B CANVAS ASSIGNMENT. Do not submit it to Form A.'
+};
+translations.nl.submissionRuleLabel = 'Indieningsregel';
+translations.nl.submissionRule = 'Download formulier A of formulier B. Dien het formulier dat je hebt gedownload in bij de Canvas-opdracht met dezelfde letter. Formulier A hoort bij de opdracht voor primaire data. Formulier B hoort bij de opdracht voor secundaire data.';
+translations.nl.primaryChoice = 'Ik heb FORMULIER A nodig - primaire data';
+translations.nl.primaryChoiceDetail = 'DOWNLOAD FORMULIER A -> DIEN IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER A';
+translations.nl.secondaryChoice = 'Ik heb FORMULIER B nodig - secundaire data';
+translations.nl.secondaryChoiceDetail = 'DOWNLOAD FORMULIER B -> DIEN IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER B';
+translations.nl.submissionLabel = 'Doe dit precies:';
+translations.nl.forms = {
+  primary: 'FORMULIER A GESELECTEERD -> DOWNLOAD FORMULIER A -> DIEN FORMULIER A IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER A. Dien het niet in bij formulier B.',
+  secondary: 'FORMULIER B GESELECTEERD -> DOWNLOAD FORMULIER B -> DIEN FORMULIER B IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER B. Dien het niet in bij formulier A.'
+};
 
 const forms = {
   primary: {
@@ -49,7 +71,7 @@ function showResult(form) {
   resultType.textContent = form.type[language];
   resultTitle.textContent = form.title[language];
   resultDescription.textContent = form.description[language];
-  submissionInstruction.textContent = form.submission[language];
+  submissionInstruction.textContent = translations[language].forms[form === forms.primary ? 'primary' : 'secondary'];
 }
 
 function applyLanguage() {
