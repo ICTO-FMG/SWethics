@@ -78,7 +78,7 @@ h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(42px, 6vw, 72px); l
 .result h2 { margin-bottom: 12px; font-size: clamp(24px, 3vw, 36px); letter-spacing: -.04em; }
 .result-content p:not(.result-type) { max-width: 600px; margin: 0; color: #f3dfe4; font-size: 13px; line-height: 1.7; }
 .result-actions { min-width: 180px; }
-.download { width: 100%; padding: 14px 16px; border: 0; background: var(--uva-red); color: var(--uva-white); font: 700 13px 'Manrope', sans-serif; cursor: pointer; }
+.download { display: block; width: 100%; padding: 14px 16px; border: 0; background: var(--uva-red); color: var(--uva-white); font: 700 13px 'Manrope', sans-serif; cursor: pointer; text-align: center; text-decoration: none; box-sizing: border-box; }
 .download:hover, .download:focus-visible { background: var(--uva-red-dark); outline: 2px solid var(--uva-white); outline-offset: 2px; }
 .download span { margin-right: 8px; font-size: 18px; }
 .reset { display: block; width: 100%; margin-top: 14px; border: 0; background: transparent; color: #f3dfe4; font: 11px 'DM Mono', monospace; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

@@ -7,18 +7,21 @@ const translations = {
   }
 };
 
+translations.en.nextStep = 'After downloading, complete every section carefully and submit the completed form through the designated Canvas assignment.';
+translations.nl.nextStep = 'Vul na het downloaden elke sectie zorgvuldig in en dien het ingevulde formulier in via de aangewezen Canvas-opdracht.';
+
 const forms = {
   primary: {
     type: { en: 'Primary data', nl: 'Primaire data' },
     title: { en: 'Primary-data ethical review form', nl: 'Ethisch beoordelingsformulier voor primaire data' },
     description: { en: 'Use this form when you will collect any new data yourself. That remains the correct route when your thesis also uses desk research, existing sources, or only one interview.', nl: 'Gebruik dit formulier als je zelf nieuwe data gaat verzamelen. Dit blijft de juiste route als je scriptie ook bureauonderzoek, bestaande bronnen of slechts één interview bevat.' },
-    filename: { en: 'ethical-review-primary-data.html', nl: 'ethische-beoordeling-primaire-data.html' }
+    filename: 'Ethical review form A - Primary (and secondary) data.pdf'
   },
   secondary: {
     type: { en: 'Secondary data', nl: 'Secundaire data' },
     title: { en: 'Secondary-data ethical review form', nl: 'Ethisch beoordelingsformulier voor secundaire data' },
     description: { en: 'Use this form when your thesis relies exclusively on material that was already collected or created by others and you will not collect any new data yourself.', nl: 'Gebruik dit formulier als je scriptie uitsluitend steunt op materiaal dat al door anderen is verzameld of gemaakt en je zelf geen nieuwe data gaat verzamelen.' },
-    filename: { en: 'ethical-review-secondary-data.html', nl: 'ethische-beoordeling-secundaire-data.html' }
+    filename: 'Ethical review form B - Secondary data only.pdf'
   }
 };
 
@@ -69,22 +72,10 @@ choices.forEach((choice) => {
     selectedForm = forms[choice.dataset.answer];
     choices.forEach((item) => item.setAttribute('aria-pressed', item === choice));
     showResult(selectedForm);
+    download.href = selectedForm.filename;
     result.hidden = false;
     result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
-});
-
-download.addEventListener('click', () => {
-  if (!selectedForm) return;
-  const copy = translations[language];
-  const sections = copy.generatedSections.map((section, index) => `<h2>${index + 1}. ${section}</h2><label>${copy.generatedPrompts[index]}<textarea></textarea></label>`).join('');
-  const documentContent = `<!doctype html><html lang="${language}"><head><meta charset="UTF-8"><title>${selectedForm.title[language]}</title><style>body{font:16px Georgia,serif;max-width:760px;margin:50px auto;line-height:1.6;color:#18211f}h1{font:32px Arial,sans-serif}h2{margin-top:32px}label{display:block;margin-top:18px;font:14px Arial,sans-serif}textarea{width:100%;min-height:90px;margin-top:7px;border:1px solid #aaa}p.note{background:#eef3ef;padding:16px}</style></head><body><h1>${selectedForm.title[language]}</h1><p class="note">${copy.generatedNote}</p>${sections}</body></html>`;
-  const blob = new Blob([documentContent], { type: 'text/html' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = selectedForm.filename[language];
-  link.click();
-  URL.revokeObjectURL(link.href);
 });
 
 reset.addEventListener('click', () => {
