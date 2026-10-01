@@ -15,13 +15,21 @@ const forms = {
     type: { en: 'Primary data', nl: 'Primaire data' },
     title: { en: 'Primary-data ethical review form', nl: 'Ethisch beoordelingsformulier voor primaire data' },
     description: { en: 'Use this form when you will collect any new data yourself. That remains the correct route when your thesis also uses desk research, existing sources, or only one interview.', nl: 'Gebruik dit formulier als je zelf nieuwe data gaat verzamelen. Dit blijft de juiste route als je scriptie ook bureauonderzoek, bestaande bronnen of slechts één interview bevat.' },
-    filename: 'Ethical review form A - Primary (and secondary) data.pdf'
+    filename: 'Ethical review form A - Primary (and secondary) data.pdf',
+    submission: {
+      en: 'This is Form A. Submit it to “Form A - Ethical review submission - primary data” in Canvas. Submitting to the wrong assignment will delay the instructors’ response.',
+      nl: 'Dit is formulier A. Dien het in bij “Form A - Ethical review submission - primary data” in Canvas. Indien je het bij de verkeerde opdracht indient, duurt het langer voordat je een reactie van de docenten krijgt.'
+    }
   },
   secondary: {
     type: { en: 'Secondary data', nl: 'Secundaire data' },
     title: { en: 'Secondary-data ethical review form', nl: 'Ethisch beoordelingsformulier voor secundaire data' },
     description: { en: 'Use this form when your thesis relies exclusively on material that was already collected or created by others and you will not collect any new data yourself.', nl: 'Gebruik dit formulier als je scriptie uitsluitend steunt op materiaal dat al door anderen is verzameld of gemaakt en je zelf geen nieuwe data gaat verzamelen.' },
-    filename: 'Ethical review form B - Secondary data only.pdf'
+    filename: 'Ethical review form B - Secondary data only.pdf',
+    submission: {
+      en: 'This is Form B. Submit it to “Form B - Ethical review submission - secondary data” in Canvas. Submitting to the wrong assignment will delay the instructors’ response.',
+      nl: 'Dit is formulier B. Dien het in bij “Form B - Ethical review submission - secondary data” in Canvas. Indien je het bij de verkeerde opdracht indient, duurt het langer voordat je een reactie van de docenten krijgt.'
+    }
   }
 };
 
@@ -32,6 +40,7 @@ const result = document.querySelector('#result');
 const resultType = document.querySelector('#result-type');
 const resultTitle = document.querySelector('#result-title');
 const resultDescription = document.querySelector('#result-description');
+const submissionInstruction = document.querySelector('#submission-instruction');
 const download = document.querySelector('#download');
 const reset = document.querySelector('#reset');
 let selectedForm = null;
@@ -40,6 +49,7 @@ function showResult(form) {
   resultType.textContent = form.type[language];
   resultTitle.textContent = form.title[language];
   resultDescription.textContent = form.description[language];
+  submissionInstruction.textContent = form.submission[language];
 }
 
 function applyLanguage() {
