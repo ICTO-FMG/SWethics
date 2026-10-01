@@ -10,28 +10,37 @@
   <body>
     <main class="shell">
       <header class="masthead">
-        <div class="mark" aria-hidden="true">SW</div>
-        <div>
-          <p class="eyebrow">Social sciences · thesis workflow</p>
-          <p class="institution">Ethical review form retrieval</p>
+        <div class="brand-lockup">
+          <div class="mark" aria-hidden="true">SW</div>
+          <div>
+            <p class="eyebrow" data-i18n="eyebrow">Social sciences · thesis workflow</p>
+            <p class="institution" data-i18n="institution">Ethical review form retrieval</p>
+          </div>
+        </div>
+        <div class="language-switcher" role="group" aria-label="Language">
+          <span class="language-label" data-i18n="languageLabel">Language</span>
+          <div class="language-options">
+            <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <button class="language-button" type="button" data-language="nl" aria-pressed="false">NL</button>
+          </div>
         </div>
       </header>
 
       <section class="hero" aria-labelledby="page-title">
-        <p class="section-kicker">01 / Choose your route</p>
-        <h1 id="page-title">Start with the data you will use.</h1>
-        <p class="intro">
+        <p class="section-kicker" data-i18n="heroKicker">01 / Choose your route</p>
+        <h1 id="page-title" data-i18n="pageTitle">Start with the data you will use.</h1>
+        <p class="intro" data-i18n="intro">
           Use this short check to retrieve the ethical review form that matches your thesis.
           The distinction is about where the data comes from, not how much data you collect.
         </p>
       </section>
 
-      <section class="guidance" aria-label="Data type definitions">
+      <section class="guidance" data-i18n-aria-label="guidanceLabel" aria-label="Data type definitions">
         <article class="definition primary-definition">
           <span class="definition-number">A</span>
           <div>
-            <h2>Primary data</h2>
-            <p>
+            <h2 data-i18n="primaryHeading">Primary data</h2>
+            <p data-i18n="primaryDefinition">
               Data you collect or produce yourself for this thesis. This includes interviews,
               surveys, observations, experiments, usability tests, or any other direct contact
               with participants. Answer <strong>yes</strong> even if you also do desk research,
@@ -42,8 +51,8 @@
         <article class="definition secondary-definition">
           <span class="definition-number">B</span>
           <div>
-            <h2>Secondary data</h2>
-            <p>
+            <h2 data-i18n="secondaryHeading">Secondary data</h2>
+            <p data-i18n="secondaryDefinition">
               Material that was already collected or created by someone else and that you reuse
               for your thesis, such as public datasets, archives, policy documents, media
               coverage, or published research. Choose this route only when you will not collect
@@ -55,29 +64,29 @@
 
       <section class="decision" aria-labelledby="decision-title">
         <div class="decision-heading">
-          <p class="section-kicker">02 / One question</p>
-          <h2 id="decision-title">Will you collect any new data yourself?</h2>
-          <p class="helper">
+          <p class="section-kicker" data-i18n="decisionKicker">02 / One question</p>
+          <h2 id="decision-title" data-i18n="decisionTitle">Will you collect any new data yourself?</h2>
+          <p class="helper" data-i18n="helper">
             Think about the complete thesis project, including a single interview or a small
             pilot. Existing sources can still be part of a primary-data thesis.
           </p>
         </div>
-        <div class="choice-grid" role="group" aria-label="Choose your data type">
+        <div class="choice-grid" role="group" data-i18n-aria-label="choiceLabel" aria-label="Choose your data type">
           <button class="choice" type="button" data-answer="primary" aria-pressed="false">
-            <span class="choice-label">Yes, I will collect new data</span>
-            <span class="choice-detail">Retrieve the primary-data form <span aria-hidden="true">↗</span></span>
+            <span class="choice-label" data-i18n="primaryChoice">Yes, I will collect new data</span>
+            <span class="choice-detail" data-i18n="primaryChoiceDetail">Retrieve the primary-data form ↗</span>
           </button>
           <button class="choice" type="button" data-answer="secondary" aria-pressed="false">
-            <span class="choice-label">No, I will only use existing material</span>
-            <span class="choice-detail">Retrieve the secondary-data form <span aria-hidden="true">↗</span></span>
+            <span class="choice-label" data-i18n="secondaryChoice">No, I will only use existing material</span>
+            <span class="choice-detail" data-i18n="secondaryChoiceDetail">Retrieve the secondary-data form ↗</span>
           </button>
         </div>
       </section>
 
       <section class="result" id="result" aria-live="polite" hidden>
         <div class="result-topline">
-          <p class="section-kicker">03 / Your form</p>
-          <span class="status"><span class="status-dot"></span>Ready to download</span>
+          <p class="section-kicker" data-i18n="resultKicker">03 / Your form</p>
+          <span class="status"><span class="status-dot"></span><span data-i18n="ready">Ready to download</span></span>
         </div>
         <div class="result-content">
           <div>
@@ -87,20 +96,20 @@
           </div>
           <div class="result-actions">
             <button class="download" id="download" type="button">
-              <span aria-hidden="true">↓</span> Download form
+              <span aria-hidden="true">↓</span> <span data-i18n="download">Download form</span>
             </button>
-            <button class="reset" id="reset" type="button">Start over</button>
+            <button class="reset" id="reset" type="button" data-i18n="reset">Start over</button>
           </div>
         </div>
         <p class="next-step">
-          After downloading, complete every section carefully, discuss your approach with your
-          supervisor, and submit the completed form through the designated Canvas assignment.
+          <span data-i18n="nextStep">After downloading, complete every section carefully, discuss your approach with your
+          supervisor, and submit the completed form through the designated Canvas assignment.</span>
         </p>
       </section>
 
       <footer>
-        <span>SW thesis ethics</span>
-        <span>Questions? Contact your thesis supervisor.</span>
+        <span data-i18n="footerTitle">SW thesis ethics</span>
+        <span data-i18n="footerContact">Questions? Contact your thesis supervisor.</span>
       </footer>
     </main>
     <script src="script.js"></script>
