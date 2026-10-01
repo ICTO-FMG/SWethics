@@ -7,29 +7,29 @@ const translations = {
   }
 };
 
-translations.en.nextStep = 'After downloading, complete every section carefully and submit the completed form through the designated Canvas assignment.';
-translations.nl.nextStep = 'Vul na het downloaden elke sectie zorgvuldig in en dien het ingevulde formulier in via de aangewezen Canvas-opdracht.';
+translations.en.nextStep = 'Download the form, fill in every section completely, then submit it to the matching Canvas assignment.';
+translations.nl.nextStep = 'Download het formulier, vul elke sectie volledig in en dien het daarna in bij de bijbehorende Canvas-opdracht.';
 translations.en.submissionRuleLabel = 'Submission rule';
-translations.en.submissionRule = 'Download Form A or Form B. Submit the form you downloaded to the Canvas assignment with the same letter. Form A goes to the primary-data assignment. Form B goes to the secondary-data assignment.';
-translations.en.primaryChoice = 'I need FORM A - primary data';
-translations.en.primaryChoiceDetail = 'DOWNLOAD FORM A -> SUBMIT TO THE FORM A CANVAS ASSIGNMENT';
-translations.en.secondaryChoice = 'I need FORM B - secondary data';
-translations.en.secondaryChoiceDetail = 'DOWNLOAD FORM B -> SUBMIT TO THE FORM B CANVAS ASSIGNMENT';
+translations.en.submissionRule = 'Answer YES if you will collect new data: you will receive Form A. Answer NO if you will only use existing material: you will receive Form B. Fill in the form completely before submitting it to the matching Canvas assignment.';
+translations.en.primaryChoice = 'Yes, I will collect new data';
+translations.en.primaryChoiceDetail = 'You will receive Form A - primary data';
+translations.en.secondaryChoice = 'No, I will only use existing material';
+translations.en.secondaryChoiceDetail = 'You will receive Form B - secondary data';
 translations.en.submissionLabel = 'Do this exactly:';
 translations.en.forms = {
-  primary: 'FORM A SELECTED -> DOWNLOAD FORM A -> SUBMIT FORM A TO THE FORM A CANVAS ASSIGNMENT. Do not submit it to Form B.',
-  secondary: 'FORM B SELECTED -> DOWNLOAD FORM B -> SUBMIT FORM B TO THE FORM B CANVAS ASSIGNMENT. Do not submit it to Form A.'
+  primary: 'DOWNLOAD FORM A -> FILL IN THE FORM COMPLETELY -> SUBMIT FORM A TO THE FORM A CANVAS ASSIGNMENT. Do not submit it to Form B.',
+  secondary: 'DOWNLOAD FORM B -> FILL IN THE FORM COMPLETELY -> SUBMIT FORM B TO THE FORM B CANVAS ASSIGNMENT. Do not submit it to Form A.'
 };
 translations.nl.submissionRuleLabel = 'Indieningsregel';
-translations.nl.submissionRule = 'Download formulier A of formulier B. Dien het formulier dat je hebt gedownload in bij de Canvas-opdracht met dezelfde letter. Formulier A hoort bij de opdracht voor primaire data. Formulier B hoort bij de opdracht voor secundaire data.';
-translations.nl.primaryChoice = 'Ik heb FORMULIER A nodig - primaire data';
-translations.nl.primaryChoiceDetail = 'DOWNLOAD FORMULIER A -> DIEN IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER A';
-translations.nl.secondaryChoice = 'Ik heb FORMULIER B nodig - secundaire data';
-translations.nl.secondaryChoiceDetail = 'DOWNLOAD FORMULIER B -> DIEN IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER B';
+translations.nl.submissionRule = 'Antwoord JA als je nieuwe data gaat verzamelen: je krijgt formulier A. Antwoord NEE als je alleen bestaand materiaal gebruikt: je krijgt formulier B. Vul het formulier volledig in voordat je het bij de bijbehorende Canvas-opdracht indient.';
+translations.nl.primaryChoice = 'Ja, ik ga nieuwe data verzamelen';
+translations.nl.primaryChoiceDetail = 'Je krijgt formulier A - primaire data';
+translations.nl.secondaryChoice = 'Nee, ik gebruik alleen bestaand materiaal';
+translations.nl.secondaryChoiceDetail = 'Je krijgt formulier B - secundaire data';
 translations.nl.submissionLabel = 'Doe dit precies:';
 translations.nl.forms = {
-  primary: 'FORMULIER A GESELECTEERD -> DOWNLOAD FORMULIER A -> DIEN FORMULIER A IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER A. Dien het niet in bij formulier B.',
-  secondary: 'FORMULIER B GESELECTEERD -> DOWNLOAD FORMULIER B -> DIEN FORMULIER B IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER B. Dien het niet in bij formulier A.'
+  primary: 'DOWNLOAD FORMULIER A -> VUL HET FORMULIER VOLLEDIG IN -> DIEN FORMULIER A IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER A. Dien het niet in bij formulier B.',
+  secondary: 'DOWNLOAD FORMULIER B -> VUL HET FORMULIER VOLLEDIG IN -> DIEN FORMULIER B IN BIJ DE CANVAS-OPDRACHT VOOR FORMULIER B. Dien het niet in bij formulier A.'
 };
 
 const forms = {

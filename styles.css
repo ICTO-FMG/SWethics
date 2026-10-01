@@ -68,8 +68,8 @@ h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(42px, 6vw, 72px); l
 .choice:hover, .choice:focus-visible { border-color: var(--uva-red); background: #fff5f7; transform: translateY(-3px); outline: none; }
 .choice[aria-pressed='true'] { border: 2px solid var(--uva-red); background: #fff5f7; box-shadow: 5px 5px 0 var(--uva-red); }
 .choice-label, .choice-detail { display: block; }
-.choice-label { margin-bottom: 16px; font-size: 16px; font-weight: 700; }
-.choice-detail { color: var(--uva-red-dark); font-family: 'DM Mono', monospace; font-size: 11px; }
+.choice-label { margin-bottom: 16px; font-size: 16px; font-weight: 700; line-height: 1.35; }
+.choice-detail { color: var(--uva-red-dark); font-family: 'DM Mono', monospace; font-size: 11px; line-height: 1.5; }
 .result { margin-top: 52px; padding: 30px; border: 1px solid var(--uva-black); background: var(--uva-black); color: var(--uva-white); animation: appear .35s ease both; }
 .result-topline { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.18); padding-bottom: 18px; }
 .result .section-kicker { color: #f3dfe4; margin: 0; }
