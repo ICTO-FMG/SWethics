@@ -35,7 +35,9 @@
         </p>
         <div class="submission-rule" role="note">
           <strong data-i18n="submissionRuleLabel">Submission rule</strong>
-          <span data-i18n="submissionRule">Answer YES if you will collect new data: you will receive Form A. Answer NO if you will only use existing material: you will receive Form B. Fill in the form completely before submitting it to the matching Canvas assignment.</span>
+          <span data-i18n="submissionRule">Answer YES if you will collect new data from human participants: 
+            you will receive the form 'Primary Data'. Answer NO if you will only use existing material: 
+            you will receive the form 'Other'. Fill in the form completely before submitting it to the matching Canvas assignment.</span>
         </div>
       </section>
 
@@ -45,9 +47,9 @@
           <div>
             <h2 data-i18n="primaryHeading">Primary data</h2>
             <p data-i18n="primaryDefinition">
-              Data you collect or produce yourself for this thesis. This includes interviews,
+              Data from human participants that you collect yourself. This includes interviews,
               surveys, observations, experiments, usability tests, or any other direct contact
-              with participants. Answer <strong>yes</strong> even if you also do desk research,
+              with participants. Answer <strong>yes</strong> even if you <em>also</em> do desk research, use secondary data, 
               collect only one interview, or use a small sample.
             </p>
           </div>
@@ -55,12 +57,12 @@
         <article class="definition secondary-definition">
           <span class="definition-number">B</span>
           <div>
-            <h2 data-i18n="secondaryHeading">Secondary data</h2>
+            <h2 data-i18n="secondaryHeading">Secondary or no data</h2>
             <p data-i18n="secondaryDefinition">
-              Material that was already collected or created by someone else and that you reuse
-              for your thesis, such as public datasets, archives, policy documents, media
-              coverage, or published research. Choose this route only when you will not collect
-              any new data yourself.
+              Material that was already collected or created by someone else and that you reuse,
+              such as public datasets, archives, policy documents, media
+              coverage, or published research. Purely theoretical work or simulation studies also fall into this category.
+              Choose this option only when you will not collect any new data yourself.
             </p>
           </div>
         </article>
@@ -72,17 +74,17 @@
           <h2 id="decision-title" data-i18n="decisionTitle">Will you collect any new data yourself?</h2>
           <p class="helper" data-i18n="helper">
             Think about the complete thesis project, including a single interview or a small
-            pilot. Existing sources can still be part of a primary-data thesis.
+            pilot. Existing sources can still be part of a primary-data thesis. |EXAMPLE?|
           </p>
         </div>
         <div class="choice-grid" role="group" data-i18n-aria-label="choiceLabel" aria-label="Choose your data type">
           <button class="choice" type="button" data-answer="primary" aria-pressed="false">
             <span class="choice-label" data-i18n="primaryChoice">Yes, I will collect new data</span>
-            <span class="choice-detail" data-i18n="primaryChoiceDetail">Retrieve the primary-data form ↗</span>
+            <span class="choice-detail" data-i18n="primaryChoiceDetail">Retrieve the form 'Primary Data' ↗</span>
           </button>
           <button class="choice" type="button" data-answer="secondary" aria-pressed="false">
             <span class="choice-label" data-i18n="secondaryChoice">No, I will only use existing material</span>
-            <span class="choice-detail" data-i18n="secondaryChoiceDetail">Retrieve the secondary-data form ↗</span>
+            <span class="choice-detail" data-i18n="secondaryChoiceDetail">Retrieve the form 'Other' ↗</span>
           </button>
         </div>
       </section>
@@ -99,7 +101,7 @@
             <p id="result-description"></p>
           </div>
           <div class="result-actions">
-            <a class="download" id="download" href="Ethical review form A - Primary (and secondary) data.pdf" download>
+            <a class="download" id="download" href="Ethical review form Primary (and secondary) data.pdf" download>
               <span aria-hidden="true">↓</span> <span data-i18n="download">Download form</span>
             </a>
             <button class="reset" id="reset" type="button" data-i18n="reset">Start over</button>
